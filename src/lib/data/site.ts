@@ -7,7 +7,7 @@ export const site = {
 	email: 'hello@barber.shop',
 	address: 'Shop 12, Linking Road, Bandra West, Mumbai 400050',
 	hours: 'Mon – Sat, 9:00 AM – 9:00 PM IST',
-	url: 'https://barber.pages.dev'
+	url: 'https://barber-8da.pages.dev'
 } as const;
 
 export const navLinks = [

@@ -1,6 +1,6 @@
 # Barber — Real Cuts By Real Professionals
 
-**Live:** https://barber.pages.dev · **Repo:** https://github.com/dusmamud/barber
+**Live:** https://barber-8da.pages.dev · **Repo:** https://github.com/dusmamud/barber
 
 Classic barbershop website, built to match the reference design: white header +
 hero, dark Services and Products sections, Modern Haircut about section, news,
