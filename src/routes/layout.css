@@ -12,6 +12,10 @@
 	--font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 	--color-accent: #df7448;
 	--color-accent-dark: #c85f36;
+	/* Text on light backgrounds — 5.1:1 on white, passes WCAG AA (4.5:1).
+	   Bright accent (#df7448) is only 3.12:1 on white, so it stays for fills
+	   and dark backgrounds, never for small text on white. */
+	--color-accent-text: #b4502a;
 	--color-ink: #131315;
 	--color-coal: #1a1b1e;
 	--color-mist: #f4f2ef;
