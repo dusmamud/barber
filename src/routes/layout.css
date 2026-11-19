@@ -1,0 +1,91 @@
+@import '@fontsource/playfair-display/600.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/playfair-display/800.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import 'tailwindcss';
+
+@theme {
+	--font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+	--font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+	--color-accent: #df7448;
+	--color-accent-dark: #c85f36;
+	--color-ink: #131315;
+	--color-coal: #1a1b1e;
+	--color-mist: #f4f2ef;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-sans);
+	background: #fff;
+	color: var(--color-ink);
+	-webkit-font-smoothing: antialiased;
+}
+
+::selection {
+	background: var(--color-accent);
+	color: #fff;
+}
+
+:focus-visible {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 3px;
+}
+
+/* Reference jaisa hard offset shadow button */
+.btn-hard {
+	box-shadow: 4px 4px 0 0 #131315;
+	transition:
+		transform 150ms ease,
+		box-shadow 150ms ease;
+}
+.btn-hard:hover {
+	transform: translate(-1px, -1px);
+	box-shadow: 5px 5px 0 0 #131315;
+}
+.btn-hard:active {
+	transform: translate(2px, 2px);
+	box-shadow: 2px 2px 0 0 #131315;
+}
+.btn-hard-light {
+	box-shadow: 4px 4px 0 0 rgba(255, 255, 255, 0.35);
+	transition:
+		transform 150ms ease,
+		box-shadow 150ms ease;
+}
+.btn-hard-light:hover {
+	transform: translate(-1px, -1px);
+	box-shadow: 5px 5px 0 0 rgba(255, 255, 255, 0.35);
+}
+.btn-hard-light:active {
+	transform: translate(2px, 2px);
+	box-shadow: 2px 2px 0 0 rgba(255, 255, 255, 0.35);
+}
+
+.spin-slow {
+	animation: spin-slow 18s linear infinite;
+}
+@keyframes spin-slow {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	.spin-slow {
+		animation: none;
+	}
+	.btn-hard,
+	.btn-hard-light {
+		transition: none;
+	}
+}
