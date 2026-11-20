@@ -75,7 +75,7 @@
 	</div>
 	<p class="mt-10 text-center text-sm text-neutral-500">
 		Not sure who to pick?
-		<a href="/book?barber=any" class="font-bold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text">
+		<a href="/book?barber=any" class="inline-block py-1 font-bold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text">
 			Book with the first available barber
 		</a>
 		— we match you to the right chair for your cut.

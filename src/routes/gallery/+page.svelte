@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PageHead from '#lib/components/PageHead.svelte';
+	import BeforeAfter from '#lib/components/BeforeAfter.svelte';
 	import Picture from '#lib/components/Picture.svelte';
 	import { gallery, galleryCategories } from '#lib/data/site.js';
 	import { reveal } from '#lib/motion.js';
@@ -104,9 +105,22 @@
 		{/each}
 	</div>
 
+	<section class="mt-16" aria-labelledby="before-after-heading" use:reveal>
+		<h2 id="before-after-heading" class="font-display text-2xl font-bold text-ink sm:text-3xl">
+			Before &amp; After
+		</h2>
+		<p class="mt-2 max-w-2xl text-sm leading-relaxed text-neutral-500">
+			Drag the handle to see the difference a proper fade makes. Same chair, same
+			barber — thirty minutes apart.
+		</p>
+		<div class="mx-auto mt-6 max-w-3xl">
+			<BeforeAfter name="gallery-fade" alt="Skin fade haircut — before and after comparison" />
+		</div>
+	</section>
+
 	<p class="mt-10 text-center text-sm text-neutral-500">
 		Like what you see?
-		<a href="/book" class="font-bold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text">
+		<a href="/book" class="inline-block py-1 font-bold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text">
 			Book the same chair
 		</a>
 	</p>

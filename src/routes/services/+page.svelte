@@ -122,7 +122,7 @@
 			Not sure what to ask for?
 			<a
 				href="/blog/ask-for-the-perfect-fade"
-				class="font-bold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text"
+				class="inline-block py-1 font-bold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text"
 			>
 				Read how to ask for the perfect fade
 			</a>

@@ -76,18 +76,23 @@
 		>
 			<ChevronLeft class="h-5 w-5" />
 		</button>
-		<div class="flex gap-2" role="tablist" aria-label="Choose testimonial">
+		<div class="flex items-center gap-1" role="tablist" aria-label="Choose testimonial">
 			{#each testimonials as _, i}
 				<button
 					type="button"
 					role="tab"
 					aria-selected={selected === i}
 					aria-label="Go to testimonial {i + 1}"
-					class="h-2.5 rounded-full transition-all {selected === i
-						? 'w-8 bg-accent'
-						: 'w-2.5 bg-neutral-300 hover:bg-neutral-400'}"
+					class="flex h-8 w-8 items-center justify-center"
 					onclick={() => emblaApi?.scrollTo(i)}
-				></button>
+				>
+					<span
+						class="block h-2.5 rounded-full transition-all {selected === i
+							? 'w-8 bg-accent'
+							: 'w-2.5 bg-neutral-300 hover:bg-neutral-400'}"
+						aria-hidden="true"
+					></span>
+				</button>
 			{/each}
 		</div>
 		<button

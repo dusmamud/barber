@@ -42,7 +42,7 @@
 						href={site.mapsUrl}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="font-bold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text"
+						class="inline-block py-1 font-bold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text"
 					>
 						Get directions on Google Maps
 					</a>
@@ -50,7 +50,7 @@
 			</li>
 			<li class="flex items-center gap-3">
 				<Phone class="h-5 w-5 shrink-0 text-accent" />
-				<a href={site.phoneHref} class="font-semibold text-ink hover:text-accent-text">{site.phone}</a>
+				<a href={site.phoneHref} class="inline-block py-1 font-semibold text-ink hover:text-accent-text">{site.phone}</a>
 			</li>
 			<li class="flex items-center gap-3">
 				<MessageCircle class="h-5 w-5 shrink-0 text-accent" />
@@ -58,12 +58,12 @@
 					href={site.whatsapp}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="font-semibold text-ink hover:text-accent-text">Chat with us on WhatsApp</a
+					class="inline-block py-1 font-semibold text-ink hover:text-accent-text">Chat with us on WhatsApp</a
 				>
 			</li>
 			<li class="flex items-center gap-3">
 				<Mail class="h-5 w-5 shrink-0 text-accent" />
-				<a href="mailto:{site.email}" class="font-semibold text-ink hover:text-accent-text">
+				<a href="mailto:{site.email}" class="inline-block py-1 font-semibold text-ink hover:text-accent-text">
 					{site.email}
 				</a>
 			</li>
@@ -120,7 +120,7 @@
 				href={site.mapsUrl}
 				target="_blank"
 				rel="noopener noreferrer"
-				class="font-semibold text-ink underline">directions link</a
+				class="inline-block py-1 font-semibold text-ink underline">directions link</a
 			>
 			above.
 		</p>

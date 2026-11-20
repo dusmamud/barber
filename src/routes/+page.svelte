@@ -51,6 +51,12 @@
 			ratingValue: site.rating,
 			reviewCount: site.reviewCount
 		},
+		review: testimonials.slice(0, 2).map((t) => ({
+			'@type': 'Review',
+			author: { '@type': 'Person', name: t.name },
+			reviewRating: { '@type': 'Rating', ratingValue: t.rating },
+			reviewBody: t.quote
+		})),
 		sameAs: [site.instagram, site.facebook, site.twitter]
 	};
 
@@ -188,7 +194,7 @@
 			<p class="mt-6 flex items-center gap-2 text-sm text-neutral-500">
 				<Phone class="h-4 w-4 text-accent" />
 				Or call us at
-				<a href={site.phoneHref} class="font-semibold text-ink hover:text-accent">
+				<a href={site.phoneHref} class="inline-block py-1 font-semibold text-ink hover:text-accent">
 					{site.phone}
 				</a>
 			</p>
@@ -246,7 +252,7 @@
 						</p>
 						<a
 							href="/book?service={service.id}"
-							class="mt-4 inline-block border-b-2 border-accent pb-0.5 text-xs font-bold tracking-[0.2em] text-ink hover:text-accent-text"
+							class="mt-4 inline-block border-b-2 border-accent py-1 text-xs font-bold tracking-[0.2em] text-ink hover:text-accent-text"
 						>
 							BOOK THIS
 						</a>
@@ -373,7 +379,7 @@
 					</p>
 					<a
 						href="/book?barber={barber.id}"
-						class="mt-3 inline-block border-b-2 border-accent pb-0.5 text-xs font-bold tracking-[0.2em] text-ink hover:text-accent-text"
+						class="mt-3 inline-block border-b-2 border-accent py-1 text-xs font-bold tracking-[0.2em] text-ink hover:text-accent-text"
 					>
 						BOOK WITH {barber.name.split(' ')[0].toUpperCase()}
 					</a>
@@ -442,7 +448,7 @@
 		</div>
 		<p class="mt-8 text-center text-sm text-neutral-500">
 			{testimonials.length} of {site.reviewCount} reviews shown ·
-			<a href="/barbers" class="font-semibold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text">
+			<a href="/barbers" class="inline-block py-1 font-semibold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text">
 				book the barber they loved
 			</a>
 		</p>
@@ -510,7 +516,7 @@
 				>
 					BOOK APPOINTMENT
 				</a>
-				<a href="/barbers" class="text-sm font-semibold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text">
+				<a href="/barbers" class="inline-block py-1 text-sm font-semibold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text">
 					Meet the team
 				</a>
 			</div>
@@ -545,7 +551,7 @@
 		<p class="mt-8 text-center">
 			<a
 				href="/faq"
-				class="inline-flex items-center gap-2 text-sm font-bold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text"
+				class="inline-flex items-center gap-2 py-1.5 text-sm font-bold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text"
 			>
 				See all {faqs.length} questions <ArrowRight class="h-4 w-4" />
 			</a>
@@ -590,7 +596,7 @@
 						<p class="mt-2 text-sm leading-relaxed text-neutral-500">{item.excerpt}</p>
 						<a
 							href="/blog/{item.slug}"
-							class="mt-4 inline-flex items-center gap-1.5 text-xs font-bold tracking-[0.2em] text-ink hover:text-accent-text"
+							class="mt-4 inline-flex items-center gap-1.5 py-1 text-xs font-bold tracking-[0.2em] text-ink hover:text-accent-text"
 						>
 							READ MORE <ArrowRight class="h-3.5 w-3.5" />
 						</a>
@@ -616,11 +622,11 @@
 			<ul class="mt-8 space-y-4 text-sm">
 				<li class="flex items-center gap-3">
 					<Phone class="h-5 w-5 shrink-0 text-accent" />
-					<a href={site.phoneHref} class="hover:text-accent">{site.phone}</a>
+					<a href={site.phoneHref} class="inline-block py-1 hover:text-accent">{site.phone}</a>
 				</li>
 				<li class="flex items-center gap-3">
 					<Mail class="h-5 w-5 shrink-0 text-accent" />
-					<a href="mailto:{site.email}" class="hover:text-accent">{site.email}</a>
+					<a href="mailto:{site.email}" class="inline-block py-1 hover:text-accent">{site.email}</a>
 				</li>
 				<li class="flex items-start gap-3">
 					<MapPin class="mt-0.5 h-5 w-5 shrink-0 text-accent" />

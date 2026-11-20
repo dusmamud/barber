@@ -37,6 +37,22 @@ body {
 	color: #fff;
 }
 
+/* Safety net: never allow horizontal overflow; `clip` (not `hidden`) keeps
+   position: sticky working. Long tokens (emails, URLs) may break anywhere. */
+html,
+body {
+	overflow-x: clip;
+}
+body {
+	overflow-wrap: break-word;
+}
+
+/* Breadcrumb links: give the tiny inline links a real tap target. */
+nav[aria-label='Breadcrumb'] a {
+	display: inline-block;
+	padding-block: 6px;
+}
+
 :focus-visible {
 	outline: 2px solid var(--color-accent);
 	outline-offset: 3px;
@@ -49,9 +65,17 @@ body {
 		transform 150ms ease,
 		box-shadow 150ms ease;
 }
-.btn-hard:hover {
-	transform: translate(-1px, -1px);
-	box-shadow: 5px 5px 0 0 #131315;
+/* Hover lift only on devices that really hover — on touchscreens a :hover
+   style latches after the first tap and looks stuck. */
+@media (hover: hover) and (pointer: fine) {
+	.btn-hard:hover {
+		transform: translate(-1px, -1px);
+		box-shadow: 5px 5px 0 0 #131315;
+	}
+	.btn-hard-light:hover {
+		transform: translate(-1px, -1px);
+		box-shadow: 5px 5px 0 0 rgba(255, 255, 255, 0.35);
+	}
 }
 .btn-hard:active {
 	transform: translate(2px, 2px);
@@ -62,10 +86,6 @@ body {
 	transition:
 		transform 150ms ease,
 		box-shadow 150ms ease;
-}
-.btn-hard-light:hover {
-	transform: translate(-1px, -1px);
-	box-shadow: 5px 5px 0 0 rgba(255, 255, 255, 0.35);
 }
 .btn-hard-light:active {
 	transform: translate(2px, 2px);

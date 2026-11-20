@@ -81,7 +81,7 @@
 							href={site.mapsUrl}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="font-semibold text-white/80 underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
+							class="inline-block py-1 font-semibold text-white/80 underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
 						>
 							Get directions
 						</a>

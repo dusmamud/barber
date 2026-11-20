@@ -50,7 +50,7 @@
 				<p class="mt-2 text-sm leading-relaxed text-neutral-500">{post.excerpt}</p>
 				<a
 					href="/blog/{post.slug}"
-					class="mt-4 inline-flex items-center gap-1.5 text-xs font-bold tracking-[0.2em] text-ink hover:text-accent-text"
+					class="mt-4 inline-flex items-center gap-1.5 py-1 text-xs font-bold tracking-[0.2em] text-ink hover:text-accent-text"
 				>
 					READ MORE <ArrowRight class="h-3.5 w-3.5" />
 				</a>

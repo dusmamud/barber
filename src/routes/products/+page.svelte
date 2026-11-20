@@ -145,5 +145,9 @@
 				</article>
 			{/each}
 		</div>
+		<p class="mt-6 max-w-2xl text-sm leading-relaxed text-neutral-500">
+			<strong class="font-semibold text-ink">Loyalty:</strong> every 10th cut is on us. Ask at
+			the shop for your loyalty card — no app, no sign-up, just a stamp each visit.
+		</p>
 	</section>
 </div>

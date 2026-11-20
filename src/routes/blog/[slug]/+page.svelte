@@ -78,7 +78,7 @@
 	<p class="mt-10">
 		<a
 			href="/blog"
-			class="inline-flex items-center gap-2 text-sm font-bold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text"
+			class="inline-flex items-center gap-2 py-1.5 text-sm font-bold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-text"
 		>
 			<ArrowLeft class="h-4 w-4" /> Back to all articles
 		</a>
